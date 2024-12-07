@@ -1,8 +1,14 @@
-name: Hello(wokflows_name) #ワークフロー名
+name: Hello(wokflows_name) #ワークフロー名。1つのymlファイルに1つのワークフローを定義する。
 on: push #pushされたときに実行
 jobs: #ジョブの定義
   hello_jobname: #ジョブ名
     runs-on: ubuntu-latest #実行環境
     steps: #ステップの定義
-      - run: echo "Hello, world.3" #実行するコマンド
+      - run: echo "Hello, world3.job1" #実行するコマンド
+      - uses: actions/checkout@v4 #リポジトリをチェックアウト。具体的には、GitHub Actionsが実行されるリポジトリをチェックアウトする。
+
+  hello2_jobname: #ジョブ名
+    runs-on: ubuntu-latest #実行環境
+    steps: #ステップの定義
+      - run: echo "Hello, world.job2" #実行するコマンド
       - uses: actions/checkout@v4 #リポジトリをチェックアウト。具体的には、GitHub Actionsが実行されるリポジトリをチェックアウトする。
