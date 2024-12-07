@@ -1,8 +1,8 @@
 name: Hello(wokflows_name) #ワークフロー名
 on: push #pushされたときに実行
 jobs: #ジョブの定義
-  hello: #ジョブ名
+  hello_jobname: #ジョブ名
     runs-on: ubuntu-latest #実行環境
     steps: #ステップの定義
-      - run: echo "Hello, world.2" #実行するコマンド
+      - run: echo "Hello, world.3" #実行するコマンド
       - uses: actions/checkout@v4 #リポジトリをチェックアウト。具体的には、GitHub Actionsが実行されるリポジトリをチェックアウトする。
