@@ -24,5 +24,5 @@ jobs:
     #name: hello_name 
     runs-on: ubuntu-latest 
     steps: 
-      - run: echo "${{ inputs.input_parameter_name1 }}, ${{ inputs.input_parameter_name2 }}. yml2. job1" 
+      - run: echo "${{ inputs.input_parameter_name1 }}, ${{ inputs.input_parameter_name2 }}. choice ${{ inputs.input_parameter_name3 }}" 
       - uses: actions/checkout@v4 
