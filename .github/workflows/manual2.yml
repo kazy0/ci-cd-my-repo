@@ -11,6 +11,13 @@ on:
         description: 'パラメータの説明。[挨拶する相手]を入力。' #パラメータの説明
         required: true #必須かどうか
         default: 'world' #デフォルト値
+      input_parameter_name3:
+        description: 'パラメータの説明。typeをchoiceにすることで、列挙型かつドロップダウンメニューになる。'
+        type: choice
+        options:
+          - 'coice1'
+          - 'coice2'
+          - 'coice3'
 
 jobs: 
   manual2_jobID: 
