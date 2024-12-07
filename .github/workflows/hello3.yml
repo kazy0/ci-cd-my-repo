@@ -3,15 +3,19 @@ name: Hello3(wokflows_name)_Manual_input_parameter
 on: 
   workflow_dispatch: #手動実行用のonキー。
     inputs: #ユーザーが入力するパラメータを定義する。
-      input_parameter_name: #パラメータ名
-        description: 'パラメータの説明。挨拶の言葉を入力。' #パラメータの説明
+      input_parameter_name1: #パラメータ名
+        description: 'パラメータの説明。[挨拶の言葉]を入力。' #パラメータの説明
         required: true #必須かどうか
         default: 'Hello' #デフォルト値
+      input_parameter_name2: #パラメータ名
+        description: 'パラメータの説明。[挨拶する相手]を入力。' #パラメータの説明
+        required: true #必須かどうか
+        default: 'world' #デフォルト値
 
 jobs: 
-  yml2_hello1_jobID: 
+  yml3_hello1_jobID: 
     #name: hello_name 
     runs-on: ubuntu-latest 
     steps: 
-      - run: echo "${{ inputs.input_parameter_name }}, world. yml2. job1" 
+      - run: echo "${{ inputs.input_parameter_name1 }}, ${{ inputs.input_parameter_name2 }}. yml2. job1" 
       - uses: actions/checkout@v4 
