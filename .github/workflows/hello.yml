@@ -1,17 +1,18 @@
 name: Hello(wokflows_name) #ワークフロー名。1つのymlファイルに1つのワークフローを定義する。
 on: push #pushされたときに実行
 jobs: #ジョブの定義
-  hello_jobID: #ジョブID
+
+  hello_jobID: #ジョブID。ジョブは2つ以上宣言できる。ジョブIDは一意である必要がある。
     #name: hello_name #ジョブ名。なくてもよい。ジョブ名がない場合、ジョブIDが表示される。
     runs-on: ubuntu-latest #実行環境
     steps: #ステップの定義
       - run: echo "Hello, world. yml1. job1" #実行するコマンド
       - uses: actions/checkout@v4 #リポジトリをチェックアウト。具体的には、GitHub Actionsが実行されるリポジトリをチェックアウトする。
 
-  hello2_jobID: #ジョブID
-    #name: hello_name #ジョブ名
-    runs-on: ubuntu-latest #実行環境
-    steps: #ステップの定義
-      - run: echo "Hello, world. yml2. job2" #実行するコマンド
-      - uses: actions/checkout@v4 #リポジトリをチェックアウト。
+  hello2_jobID: 
+    #name: hello_name 
+    runs-on: ubuntu-latest 
+    steps: 
+      - run: echo "Hello, world. yml1. job2" 
+      - uses: actions/checkout@v4 
 
