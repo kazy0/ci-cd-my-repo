@@ -16,3 +16,6 @@ jobs: #ジョブの定義
       - run: echo "Hello, world. yml1. job2" 
       - uses: actions/checkout@v4 
 
+#メモ
+#ymlファイル名を変更すると、GitHubサイト上のActitionsタブ上から、変更前のymlファイルの実行ログが見られなくなる。
+

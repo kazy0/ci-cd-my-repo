@@ -1,5 +1,5 @@
 #.github/workflowsディレクトリ配下にymlファイルは複数配置できる。
-name: Hello3(wokflows_name)_Manual_input_parameter 
+name: Manual(wokflows_name)_input_parameter 
 on: 
   workflow_dispatch: #手動実行用のonキー。
     inputs: #ユーザーが入力するパラメータを定義する。
@@ -13,7 +13,7 @@ on:
         default: 'world' #デフォルト値
 
 jobs: 
-  yml3_hello1_jobID: 
+  manual2_jobID: 
     #name: hello_name 
     runs-on: ubuntu-latest 
     steps: 
