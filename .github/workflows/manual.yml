@@ -1,12 +1,12 @@
 #.github/workflowsディレクトリ配下にymlファイルは複数配置できる。
-name: Hello2(wokflows_name)_Manual 
+name: Manual(wokflows_name)
 on: workflow_dispatch #手動実行用のonキー。
 
 jobs: 
-  yml2_hello_jobID: 
+  manual_jobID: 
     #name: hello_name 
     runs-on: ubuntu-latest 
     steps: 
-      - run: echo "Hello, world. yml2. job1" 
+      - run: echo "Hello, world." 
       - uses: actions/checkout@v4 
 
