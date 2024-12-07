@@ -14,3 +14,4 @@ jobs: #ジョブの定義
     steps: #ステップの定義
       - run: echo "Hello, world. yml2. job2" #実行するコマンド
       - uses: actions/checkout@v4 #リポジトリをチェックアウト。
+
