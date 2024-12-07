@@ -2,14 +2,14 @@ name: Hello(wokflows_name) #ワークフロー名。1つのymlファイルに1�
 on: push #pushされたときに実行
 jobs: #ジョブの定義
 
-  hello_jobID: #ジョブID。ジョブは2つ以上宣言できる。ジョブIDは一意である必要がある。
+  yml1_hello1_jobID: #ジョブID。ジョブは2つ以上宣言できる。ジョブIDは一意である必要がある。
     #name: hello_name #ジョブ名。なくてもよい。ジョブ名がない場合、ジョブIDが表示される。
     runs-on: ubuntu-latest #実行環境
     steps: #ステップの定義
       - run: echo "Hello, world. yml1. job1" #実行するコマンド
       - uses: actions/checkout@v4 #リポジトリをチェックアウト。具体的には、GitHub Actionsが実行されるリポジトリをチェックアウトする。
 
-  hello2_jobID: 
+  yml1_hello2_jobID: 
     #name: hello_name 
     runs-on: ubuntu-latest 
     steps: 

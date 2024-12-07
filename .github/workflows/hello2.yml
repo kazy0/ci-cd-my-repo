@@ -3,7 +3,7 @@ name: Hello2(wokflows_name)_Manual
 on: workflow_dispatch #手動実行用のonキー。
 
 jobs: 
-  hello_jobID: 
+  yml2_hello_jobID: 
     #name: hello_name 
     runs-on: ubuntu-latest 
     steps: 
