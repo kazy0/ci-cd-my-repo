@@ -1,5 +1,5 @@
 #.github/workflowsディレクトリ配下にymlファイルは複数配置できる。
-name: Hello2(wokflows_name)_Manual
+name: Hello3(wokflows_name)_Manual_input_parameter 
 on: 
   workflow_dispatch: #手動実行用のonキー。
     inputs: #ユーザーが入力するパラメータを定義する。
