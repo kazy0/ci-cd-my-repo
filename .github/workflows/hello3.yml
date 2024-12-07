@@ -1,0 +1,17 @@
+#.github/workflowsディレクトリ配下にymlファイルは複数配置できる。
+name: Hello2(wokflows_name)_Manual
+on: 
+  workflow_dispatch: #手動実行用のonキー。
+    inputs: #ユーザーが入力するパラメータを定義する。
+      input_parameter_name: #パラメータ名
+        description: 'パラメータの説明。挨拶の言葉を入力。' #パラメータの説明
+        required: true #必須かどうか
+        default: 'Hello' #デフォルト値
+
+jobs: 
+  yml2_hello1_jobID: 
+    #name: hello_name 
+    runs-on: ubuntu-latest 
+    steps: 
+      - run: echo "${{ inputs.input_parameter_name }}, world. yml2. job1" 
+      - uses: actions/checkout@v4 
